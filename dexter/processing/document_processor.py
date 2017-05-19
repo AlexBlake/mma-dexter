@@ -49,6 +49,7 @@ class DocumentProcessor:
             ChronicleZWCrawler(),
             BBCCrawler(),
             DACrawler(),
+            HuffingtonPostCrawler(),
             # must come last
             GenericCrawler()]
         self.extractors = [

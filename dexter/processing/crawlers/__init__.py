@@ -20,3 +20,4 @@ from .dwcom import DWCrawler
 from .chroniclezw import ChronicleZWCrawler
 from .bbc import BBCCrawler
 from .da import DACrawler
+from .huffingtonpost import HuffingtonPostCrawler

@@ -175,7 +175,8 @@ The Star (Kenya)|online|the-star.co.ke||ke
 The East African|online|theeastafrican.co.ke||ke
 Daily News (Tanzania)|online|dailynews.co.tz||tz
 Daily News (Zimbabwe)|online|dailynews.co.zw||tz
-DA|online|da.org.za||za 
+DA|online|da.org.za||za
+Huffington Post|online|huffingtonpost.co.za||za
             """
 
         mediums = []
