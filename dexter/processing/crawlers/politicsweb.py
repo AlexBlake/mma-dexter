@@ -18,20 +18,6 @@ class PoliticsWebCrawler(BaseCrawler):
         parts = urlparse(url)
         return bool(self.PWeb.match(parts.netloc))
 
-        
-    # def fetch(self, url):
-    #     """
-    #     Fetch and return the raw HTML for this url.
-    #     The return content is a unicode string.
-    #     """
-    #     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-    #     r = requests.get(url, timeout=10, headers=headers, verify=False)
-    #     # raise an HTTPError on badness
-    #     r.raise_for_status()
-
-    #     # this decodes r.content using a guessed encoding
-    #     return r.text
-
 
     def extract(self, doc, raw_html):
         """ Extract text and other things from the raw_html for this document. """
