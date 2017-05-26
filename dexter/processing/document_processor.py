@@ -50,6 +50,7 @@ class DocumentProcessor:
             BBCCrawler(),
             DACrawler(),
             HuffingtonPostCrawler(),
+            RNewsCrawler(),
             # must come last
             GenericCrawler()]
         self.extractors = [

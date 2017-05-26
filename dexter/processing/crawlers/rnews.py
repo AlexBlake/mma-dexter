@@ -8,23 +8,17 @@ import logging
 from .base import BaseCrawler
 from ...models import Entity, Author, AuthorType
 
-class DACrawler(BaseCrawler):
-    DA = re.compile('(www\.)?da.org.za')
+class RNewsCrawler(BaseCrawler):
+    RNews = re.compile('(www\.)?rnews.co.za')
     log = logging.getLogger(__name__)
 
 
     def offer(self, url):
         """ Can this crawler process this URL? """
         parts = urlparse(url)
-        return bool(self.DA.match(parts.netloc))
+        return bool(self.RNews.match(parts.netloc))
 
-    def crawl(self, doc):
-        """ Crawl this document. """
-        doc.url = self.canonicalise_url(doc.url)
-        raw_html = self.fetch(doc.url)
-        self.extract(doc, raw_html)
-
-
+        
     def fetch(self, url):
         """
         Fetch and return the raw HTML for this url.
@@ -44,15 +38,15 @@ class DACrawler(BaseCrawler):
         raw_html = raw_html.encode("utf-8")
         raw_html = unicode(raw_html, errors='ignore')
 
-        super(DACrawler, self).extract(doc, raw_html)
+        super(RNewsCrawler, self).extract(doc, raw_html)
 
         soup = BeautifulSoup(raw_html)
 
         # gather title
-        doc.title = self.extract_plaintext(soup.select("#main article h1.title"))
+        doc.title = self.extract_plaintext(soup.select("#wrapper .left_column .content .articletitle"))
 
         #gather text and summary
-        nodes = soup.select("#main article .entry > p")
+        nodes = soup.select("#wrapper .left_column .content p")
         if len(nodes) > 1:
             doc.summary = self.extract_plaintext(nodes[:1])
         else:
@@ -60,10 +54,10 @@ class DACrawler(BaseCrawler):
         doc.text = "\n\n".join(p.text.strip() for p in nodes[1:])
         
         #gather publish date
-        doc.published_at = self.parse_timestamp(self.extract_plaintext(soup.select("#main .post .post-date")))
+        doc.published_at = self.parse_timestamp(self.extract_plaintext(soup.select("#wrapper .left_column .content .author")))
 
         # gather author
-        author = self.extract_plaintext(soup.select("#main article .entry .panel-group .panel-default .list-group li.list-item-user"))
+        author = self.extract_plaintext(soup.select("#wrapper .left_column .content .author"))
 
         if author:
             doc.author = Author.get_or_create(author, AuthorType.journalist())
