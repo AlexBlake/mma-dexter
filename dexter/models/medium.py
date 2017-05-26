@@ -180,6 +180,7 @@ Huffington Post|online|huffingtonpost.co.za||za
 R News|online|rnews.co.za||za
 Politics Web|online|politicsweb.co.za||za
 African Times News|online|africantimesnews.co.za||za
+News Page|online|newspage.co.za||za
             """
 
         mediums = []
