@@ -23,3 +23,4 @@ from .da import DACrawler
 from .huffingtonpost import HuffingtonPostCrawler
 from .rnews import RNewsCrawler
 from .politicsweb import PoliticsWebCrawler
+from .africantimesnews import AfricanTimesCrawler
