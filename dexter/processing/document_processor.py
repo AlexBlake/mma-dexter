@@ -53,6 +53,7 @@ class DocumentProcessor:
             RNewsCrawler(),
             PoliticsWebCrawler(),
             AfricanTimesCrawler(),
+            NewsNowCrawler(),
             # must come last
             GenericCrawler()]
         self.extractors = [
