@@ -8,6 +8,8 @@ import logging
 from .base import BaseCrawler
 from ...models import Entity, Author, AuthorType
 
+from datetime import datetime
+
 class NewsNowCrawler(BaseCrawler):
     NewsNow = re.compile('(www\.)?newsnow.co.za')
     log = logging.getLogger(__name__)
@@ -29,7 +31,7 @@ class NewsNowCrawler(BaseCrawler):
         soup = BeautifulSoup(raw_html)
 
         # gather title
-        doc.title = self.extract_plaintext(soup.find(attrs={"property":"og:title"})['content'])
+        doc.title = soup.find(attrs={"property":"og:title"})['content']
 
         #gather text and summary
         nodes = soup.select("#main-content .entry-content > p")
@@ -40,10 +42,11 @@ class NewsNowCrawler(BaseCrawler):
         doc.text = "\n\n".join(p.text.strip() for p in nodes[1:])
         
         #gather publish date
-        doc.published_at = self.parse_timestamp(soup.find(attrs={"property":"article:published_time"})['content'])
+        date = soup.find(attrs={"property":"article:published_time"})['content']
+        doc.published_at = datetime.strptime(date[:-6],'%Y-%m-%dT%H:%M:%S')
 
         # gather author
-        author = self.extract_plaintext(self.select("#main-content .post .entry-header .entry-meta-author a.fn"))
+        author = self.extract_plaintext(soup.select("#main-content .post .entry-header .entry-meta-author a.fn"))
 
         if author:
             doc.author = Author.get_or_create(author, AuthorType.journalist())
