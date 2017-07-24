@@ -56,6 +56,7 @@ class DocumentProcessor:
             NewsPageCrawler(),
             # KenyaTodayCrawler(), # SSL Issues - need to resolve
             ImzansiCrawler(),
+            MzansiLiveCrawler(),
             # must come last
             GenericCrawler()]
         self.extractors = [

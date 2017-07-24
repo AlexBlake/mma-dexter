@@ -184,6 +184,7 @@ News Page|online|newspage.co.za||za
 Kenya Today|online|kenya-today.com||ke
 Live Monitor|online|livemonitor.co.za||za
 Imzansi|online|imzansi.com||za
+Mzansi Live|online|mzansilive.co.za||za
             """
 
         mediums = []

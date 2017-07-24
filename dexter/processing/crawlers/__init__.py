@@ -27,3 +27,4 @@ from .africantimesnews import AfricanTimesCrawler
 from .newspage import NewsPageCrawler
 # from .kenyatoday import KenyaTodayCrawler # SSL issues - need to resolve
 from .imzansi import ImzansiCrawler
+from .mzansilive import MzansiLiveCrawler
