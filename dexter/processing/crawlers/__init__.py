@@ -25,3 +25,5 @@ from .rnews import RNewsCrawler
 from .politicsweb import PoliticsWebCrawler
 from .africantimesnews import AfricanTimesCrawler
 from .newspage import NewsPageCrawler
+# from .kenyatoday import KenyaTodayCrawler # SSL issues - need to resolve
+from .imzansi import ImzansiCrawler

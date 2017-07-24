@@ -181,6 +181,9 @@ R News|online|rnews.co.za||za
 Politics Web|online|politicsweb.co.za||za
 African Times News|online|africantimesnews.co.za||za
 News Page|online|newspage.co.za||za
+Kenya Today|online|kenya-today.com||ke
+Live Monitor|online|livemonitor.co.za||za
+Imzansi|online|imzansi.com||za
             """
 
         mediums = []
