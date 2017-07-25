@@ -187,6 +187,7 @@ Imzansi|online|imzansi.com||za
 Mzansi Live|online|mzansilive.co.za||za
 South Africa Latest News|online|southafricalatestnews.co.za||za
 How South Africa|online|howsouthafrica.com||za
+IJozi|online|ijozi.co.za||za
             """
 
         mediums = []

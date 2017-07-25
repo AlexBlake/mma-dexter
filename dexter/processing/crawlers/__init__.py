@@ -30,3 +30,4 @@ from .imzansi import ImzansiCrawler
 from .mzansilive import MzansiLiveCrawler
 from .southafricalatestnews import SouthAfricaLatestNewsCrawler
 from .howsouthafrica import HowSouthAfricaCrawler
+from .ijozi import IJoziCrawler
