@@ -54,15 +54,15 @@ class DocumentProcessor:
             PoliticsWebCrawler(),
             AfricanTimesCrawler(),
             NewsPageCrawler(),
+            # KenyaTodayCrawler(), # SSL Issues - need to resolve
+            ImzansiCrawler(),
+            MzansiLiveCrawler(),
+            SouthAfricaLatestNewsCrawler(),
             HowSouthAfricaCrawler(),
             IJoziCrawler(),
             NewsDailyCrawler(),
             TrendoSharesCrawler(),
-
-LiveMonitorCrawler(),            # KenyaTodayCrawler(), # SSL Issues - need to resolve
-            ImzansiCrawler(),
-            MzansiLiveCrawler(),
-            SouthAfricaLatestNewsCrawler(),
+            LiveMonitorCrawler(),
             # must come last
             GenericCrawler()]
         self.extractors = [
