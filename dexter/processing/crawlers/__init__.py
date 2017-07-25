@@ -32,3 +32,4 @@ from .southafricalatestnews import SouthAfricaLatestNewsCrawler
 from .howsouthafrica import HowSouthAfricaCrawler
 from .ijozi import IJoziCrawler
 from .newsdaily import NewsDailyCrawler
+from .trendoshares import TrendoSharesCrawler

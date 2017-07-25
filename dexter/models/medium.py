@@ -189,6 +189,7 @@ South Africa Latest News|online|southafricalatestnews.co.za||za
 How South Africa|online|howsouthafrica.com||za
 IJozi|online|ijozi.co.za||za
 News Daily|online|newsdaily.co.za||za
+Trendo Shares|online|trendoshares.com||za
             """
 
         mediums = []

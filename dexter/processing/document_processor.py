@@ -57,6 +57,7 @@ class DocumentProcessor:
             HowSouthAfricaCrawler(),
             IJoziCrawler(),
             NewsDailyCrawler(),
+            TrendoSharesCrawler(),
             # KenyaTodayCrawler(), # SSL Issues - need to resolve
             ImzansiCrawler(),
             MzansiLiveCrawler(),
@@ -360,6 +361,7 @@ class DocumentProcessorNT:
             HowSouthAfricaCrawler(),
             IJoziCrawler(),
             NewsDailyCrawler(),
+            TrendoSharesCrawler(),
             # must come last
             GenericCrawler()]
 
