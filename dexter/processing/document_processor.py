@@ -54,6 +54,7 @@ class DocumentProcessor:
             PoliticsWebCrawler(),
             AfricanTimesCrawler(),
             NewsPageCrawler(),
+            HowSouthAfricaCrawler(),
             # KenyaTodayCrawler(), # SSL Issues - need to resolve
             ImzansiCrawler(),
             MzansiLiveCrawler(),
@@ -209,14 +210,6 @@ class DocumentProcessor:
             doc.analysis_nature = AnalysisNature.lookup(AnalysisNature.ANCHOR)
             self.process_document(doc)
 
-            self.log.info("===========================================")
-            self.log.info(doc)
-            self.log.info(doc.title)
-            self.log.info(doc.text)
-            self.log.info(doc.author)
-            self.log.info(doc.published_at)
-            self.log.info("===========================================")
-
             # only add a document if it has sources or utterances
             if doc.sources or doc.utterances:
                 db.session.add(doc)
@@ -362,6 +355,7 @@ class DocumentProcessorNT:
             ImzansiCrawler(),
             MzansiLiveCrawler(),
             SouthAfricaLatestNewsCrawler(),
+            HowSouthAfricaCrawler(),
             # must come last
             GenericCrawler()]
 
