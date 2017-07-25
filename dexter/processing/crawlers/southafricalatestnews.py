@@ -26,8 +26,8 @@ class SouthAfricaLatestNewsCrawler(BaseCrawler):
         date = self.extract_plaintext(soup.select(".ja-content-main .item-page .article-info .published")).replace('Published: ', '')
         doc.published_at = self.parse_timestamp(date)
 
-        doc.text = self.extract_plaintext(soup.select(".ja-content-main .item-page"))
-
+        doc.text = ''.join(soup.select(".ja-content-main .item-page")[0].findAll(text=True, recursive=False))
+        
         author = self.extract_plaintext(soup.select(".ja-content-main .item-page .article-info .createdby")).replace("Written by ", '')
 
         if author:
