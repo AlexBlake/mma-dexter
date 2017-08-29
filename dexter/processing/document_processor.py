@@ -63,6 +63,7 @@ class DocumentProcessor:
             NewsDailyCrawler(),
             TrendoSharesCrawler(),
             LiveMonitorCrawler(),
+            MyBroadbandCrawler(),
             # must come last
             GenericCrawler()]
         self.extractors = [
@@ -364,6 +365,7 @@ class DocumentProcessorNT:
             NewsDailyCrawler(),
             TrendoSharesCrawler(),
             LiveMonitorCrawler(),
+            MyBroadbandCrawler(),
             # must come last
             GenericCrawler()]
 

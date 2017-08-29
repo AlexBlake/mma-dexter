@@ -34,3 +34,4 @@ from .ijozi import IJoziCrawler
 from .newsdaily import NewsDailyCrawler
 from .trendoshares import TrendoSharesCrawler
 from .livemonitor import LiveMonitorCrawler
+from .mybroadband import MyBroadbandCrawler

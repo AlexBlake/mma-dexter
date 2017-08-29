@@ -190,6 +190,7 @@ How South Africa|online|howsouthafrica.com||za
 IJozi|online|ijozi.co.za||za
 News Daily|online|newsdaily.co.za||za
 Trendo Shares|online|trendoshares.com||za
+My Broadband|online|mybroadband.co.za||za
             """
 
         mediums = []
